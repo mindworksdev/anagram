@@ -1,0 +1,4 @@
+#formatter.name: pretty
+suites:
+  anagram_suite:
+    namespace: MindWorksDev

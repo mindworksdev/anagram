@@ -1,0 +1,33 @@
+{
+    "name":        "heybige/anagram",
+    "type":        "library",
+    "description": "Anagram detector",
+    "keywords":    ["console", "cli"],
+    "homepage":    "http://github.com/heybige/anagram",
+    "license":     "MIT",
+    "authors": [
+        {
+            "name":  "Eric Anderson",
+            "email": "eric@mindworksdev.com",
+            "role":  "Maintainer"
+        },
+        {
+            "name":  "Eric Anderson",
+            "email": "eric@mindworksdev.com",
+            "role":  "Developer"
+        }
+    ],
+    "require": {
+        "php": ">= 5.3.0",
+		"phpunit/phpunit": "*",
+        "phpspec/phpspec": "~2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "MindWorksDev\\": "src/"
+        }
+    },
+	"config": {
+		"bin-dir": "bin"
+	}
+}

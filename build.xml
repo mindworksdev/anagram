@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="anagram" default="test" basedir="." description="anagram">
+ <property name="message" value="anagram testing"/>
+ <target name="welcome">
+  <echo msg="${message}"/>
+ </target>
+ <target name="lint">
+  <phplint level="verbose" haltonfailure="true">
+   <fileset dir="src">
+    <include name="**/*.php"/>
+   </fileset>
+   <fileset dir="tests">
+    <include name="**/*.php"/>
+   </fileset>
+  </phplint>
+ </target>
+ <target name="test" depends="lint">
+  <phpunit bootstrap="vendor/autoload.php" printsummary="true" haltonerror="true" haltonfailure="true" configuration="./tests/phpunit.xml">
+   <formatter type="plain" usefile="false"/>
+   <batchtest>
+    <fileset dir="./tests">
+     <include name="**/*Test.php"/>
+    </fileset>
+   </batchtest>
+  </phpunit>
+ </target>
+</project>
